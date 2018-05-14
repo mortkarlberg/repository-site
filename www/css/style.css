@@ -9,6 +9,10 @@ input {
   border: none;
 }
 
+input:focus {
+  outline: 0;
+}
+
 .logo {
   margin: 0;
 }
@@ -19,6 +23,7 @@ input {
 
 .terminal-text {
   font-family:  Monaco, monospace;
+  font-size: 12px;
 }
 
 .path {
@@ -35,20 +40,4 @@ input {
 
 .git-up-to-date {
   color: lightgrey;
-}
-
-.terminal-marker {
-  animation: blink-animation 1s steps(2, start) infinite;
-  -webkit-animation: blink-animation 1s steps(2, start) infinite;
-}
-
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-@-webkit-keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
 }

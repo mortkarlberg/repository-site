@@ -12,3 +12,5 @@
 ```
 
 The dev-metal band web site.
+
+Dev release: https://repository-203818.appspot.com

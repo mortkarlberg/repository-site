@@ -14,16 +14,19 @@ input:focus {
   outline: 0;
 }
 
+.logo {
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+  margin: 0;
+}
+
 @media only screen and (max-width: 600px) {
   .logo {
-    margin: 0;
     font-size: 2vw;
   }
 }
 
 @media only screen and (min-width: 601px) {
   .logo {
-    margin: 0;
     font-size: 13px;
   }
 }
@@ -33,7 +36,7 @@ input:focus {
 }
 
 .terminal-text {
-  font-family:  Monaco, monospace;
+  font-family: monaco, Consolas, "Lucida Console", monospace;
   font-size: 12px;
 }
 

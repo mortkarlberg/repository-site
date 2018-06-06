@@ -28,6 +28,10 @@ input:focus {
   }
 }
 
+.blood-drop {
+  opacity: 0.9;
+}
+
 .terminal-text {
   font-family:  Monaco, monospace;
   font-size: 12px;

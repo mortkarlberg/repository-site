@@ -1,6 +1,7 @@
 body {
   background-color:black;
   color: darkred;
+  font-size: 13px;
 }
 
 input {
@@ -13,12 +14,18 @@ input:focus {
   outline: 0;
 }
 
-.logo {
-  margin: 0;
+@media only screen and (max-width: 600px) {
+  .logo {
+    margin: 0;
+    font-size: 2vw;
+  }
 }
 
-.blood-drop {
-  opacity: 0.9;
+@media only screen and (min-width: 601px) {
+  .logo {
+    margin: 0;
+    font-size: 13px;
+  }
 }
 
 .terminal-text {

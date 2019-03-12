@@ -1,9 +1,16 @@
+html {
+  height: 100%;
+}
+
 body {
   background-color:black;
   color: darkred;
   font-size: 13px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 input {
@@ -14,6 +21,29 @@ input {
 
 input:focus {
   outline: 0;
+}
+
+div:focus {
+  outline: 0;
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+.container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-container {
+  display: table-row;
+  height: 0px;
+}
+
+.terminal-container {
+  height: 100%;
 }
 
 .logo {
@@ -37,6 +67,13 @@ input:focus {
   opacity: 0.9;
 }
 
+.terminal {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+}
+
 .terminal-text {
   font-family: monaco, Consolas, "Lucida Console", monospace;
   font-size: 12px;
@@ -56,4 +93,10 @@ input:focus {
 
 .git-up-to-date {
   color: lightgrey;
+}
+
+.tArea {
+  &::before { content:attr(data-prefix); color:lightgrey; }
+  > span{ float:left; color:lightgrey; }
+  // > p{ margin:0; padding:0; }
 }

@@ -12,7 +12,9 @@
 </head>
 
 <body>
-  <pre class="logo">
+  <div class="container">
+    <div class="logo-container">
+      <pre class="logo">
 
  ██▀███  ▓█████  ██████   ▒█████    ██████  ██▒████████▓ ▒█████   ██▀███ ▒██   ██▓
 ▓██ ▒ ██▒▓█   ▀ ▓██░  ██▒▒██▒  ██▒▒██    ▒ ▓██▒▓  ██▒ ▓▒▒██▒  ██▒▓██ ▒ ██▒▒██  ██▒
@@ -20,20 +22,33 @@
 ▒██▀▀█▄  ▒▓█  ▄ ▒██▄█▓▒ ▒▒██   ██░  ▒   ██▒░██░░ ▒██▒ ░ ▒██   ██░▒██▀▀█▄   ░ ▐██▓░
 ░██▓ ▒██▒░▒████▒▒██▒ ░  ░░ ████▓▒░▒██████▒▒░██░  ▒██▓ ░ ░ ████▓▒░░██▒ ▒██▒ ░ ██▒▒
 ░ ▒▓ ░▒▓▓░░ ▒░ ░▒▓▒░ ░  ░░ ▒░▒░▒░ ▒ ▒▓▒ ▒ ░░▓    ▒  ▒   ░ ▒░▒░▒░ ░ ▓▒ ░▒▓░  ██▒▒░</pre>
-  <pre class="logo blood-drop">
+      <pre class="logo blood-drop">
   ░▒ ░  ▓░  ░  ░░▒ ░       ░ ▒ ▒░ ░ ░▒  ░ ░ ▒ ░    ▒      ░ ▒ ▒░   ░▒ ░ ▒░ ██ ░▒░
   ░░     ▓  ░   ░░       ░ ░ ░ ▒  ░  ░  ░   ▒ ░  ░ ▒    ░ ░ ░ ▒    ░░   ░ ▓ ▒ ░░
    ░     ░  ░    ░           ░ ░        ░   ░               ░ ░     ░     ░ ░
          ░                        ░               ░            ░</pre>
-  <div class="terminal-text path">∞
-    <span class="git-up-to-date">(master)</span>
+    </div>
+    
+    <!-- <div class="logo-container">
+      <div class="terminal-text path">∞
+        <span class="git-up-to-date">(master)</span>
+      </div>
+      <div class="terminal-text command">
+        <span class="command-start">></span>
+        <input class="terminal-text" id="terminal-input" type="text" value="git annihilate -A"> 
+      </div>
+    -->
+      <div id="terminal" class="terminal-container"></div>
+    </div> 
   </div>
-  <div class="terminal-text command">
-    <span class="command-start">></span>
-    <input class="terminal-text" id="terminal-input" type="text" value="git annihilate -A" autofocus>
-  </div>
+  <!--<script src="./js/scripts.js"></script>-->
 
-  <script src="./js/scripts.js"></script>
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="./js/terminal.js"></script>
 </body>
 
 </html>

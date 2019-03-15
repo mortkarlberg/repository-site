@@ -4,13 +4,6 @@ class Terminal extends React.Component {
     this.state = { submitting: false };
   }
 
-  /*
-    TODO:
-    - autofocus only works on input elements, needs to be solved with js
-    - clean up, remove markup, comments and unused css
-    - fix build/git structure, folder www generated and src checked in?
-  */
-
   render() {
     return (
       <div>
@@ -25,6 +18,7 @@ class Terminal extends React.Component {
   }
 }
 
+// TODO: Replaces with something that works on divs since we replaced the input element with a div.
 // Set the cursor position of the "#terminal-input" element to the end when the page loads.
 // Credits: http://blog.vishalon.net/index.php/javascript-getting-and-setting-caret-position-in-textarea/
 function setCaretPosition(ctrl, pos) {

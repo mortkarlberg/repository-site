@@ -32,14 +32,11 @@ textarea:focus {
 }
 
 .container {
-  display: table;
   width: 100%;
   height: 100%;
 }
 
 .logo-container {
-  display: table-row;
-  height: 0px;
 }
 
 .terminal-container {
@@ -74,6 +71,11 @@ textarea:focus {
   border: 0px;
 }
 
+.tArea {
+  &::before { content:attr(data-prefix); color:lightgrey; }
+  > span{ float:left; color:lightgrey; }
+}
+
 .terminal-text {
   font-family: monaco, Consolas, "Lucida Console", monospace;
   font-size: 12px;
@@ -94,10 +96,4 @@ textarea:focus {
 
 .git-up-to-date {
   color: lightgrey;
-}
-
-.tArea {
-  &::before { content:attr(data-prefix); color:lightgrey; }
-  > span{ float:left; color:lightgrey; }
-  // > p{ margin:0; padding:0; }
 }

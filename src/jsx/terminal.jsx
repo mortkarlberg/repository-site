@@ -10,7 +10,7 @@ class Terminal extends React.Component {
         <div className="terminal-text path">∞
           <span className="git-up-to-date"> (master)</span>
         </div>
-        <div className="tArea terminal terminal-text command" id="terminal-input" contentEditable="true" data-prefix="> ">
+        <div className="terminal terminal-text command" id="terminal-input" contentEditable="true" data-prefix="> ">
           git annihilate -A
         </div>
       </div>

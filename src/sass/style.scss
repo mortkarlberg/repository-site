@@ -1,7 +1,3 @@
-html {
-  height: 100%;
-}
-
 body {
   background-color:black;
   color: darkred;
@@ -13,21 +9,7 @@ body {
   overflow-y: hidden;
 }
 
-input {
-  background-color: black;
-  color: grey;
-  border: none;
-}
-
-input:focus {
-  outline: 0;
-}
-
 div:focus {
-  outline: 0;
-}
-
-textarea:focus {
   outline: 0;
 }
 
@@ -71,11 +53,6 @@ textarea:focus {
   border: 0px;
 }
 
-.tArea {
-  &::before { content:attr(data-prefix); color:lightgrey; }
-  > span{ float:left; color:lightgrey; }
-}
-
 .terminal-text {
   font-family: monaco, Consolas, "Lucida Console", monospace;
   font-size: 12px;
@@ -88,10 +65,8 @@ textarea:focus {
 
 .command {
   color: grey;
-}
-
-.command-start {
-  color: lightgrey;
+  &::before { content:attr(data-prefix); color:lightgrey; }
+  > span{ float:left; color:lightgrey; }
 }
 
 .git-up-to-date {

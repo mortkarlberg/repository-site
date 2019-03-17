@@ -1,7 +1,24 @@
 class Terminal extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { submitting: false };
+    this.state = {
+      active: true,
+      command: props.command || ""
+    };
+  }
+
+  componentDidMount() {
+    if(!this.state.active)
+      return;
+
+    const el = document.getElementById("terminal-input");
+    const range = document.createRange();
+    const sel = window.getSelection();
+    const offset = this.state.command ? this.state.command.length : 0;
+    range.setStart(el.childNodes[0], offset);
+    range.collapse(true);
+    sel.removeAllRanges();
+    sel.addRange(range);
   }
 
   render() {
@@ -11,34 +28,13 @@ class Terminal extends React.Component {
           <span className="git-up-to-date"> (master)</span>
         </div>
         <div className="terminal terminal-text command" id="terminal-input" contentEditable="true" data-prefix="> ">
-          git annihilate -A
+          {this.state.command || <span></span>}
         </div>
       </div>
     )
   }
 }
 
-// TODO: Replaces with something that works on divs since we replaced the input element with a div.
-// Set the cursor position of the "#terminal-input" element to the end when the page loads.
-// Credits: http://blog.vishalon.net/index.php/javascript-getting-and-setting-caret-position-in-textarea/
-function setCaretPosition(ctrl, pos) {
-  // Modern browsers
-  if (ctrl.setSelectionRange) {
-    ctrl.focus();
-    ctrl.setSelectionRange(pos, pos);
-  // IE8 and below
-  } else if (ctrl.createTextRange) {
-    var range = ctrl.createTextRange();
-    range.collapse(true);
-    range.moveEnd('character', pos);
-    range.moveStart('character', pos);
-    range.select();
-  }
-}
-
 const container = document.querySelector('#terminal');
-const terminal = React.createElement(Terminal);
+const terminal = <Terminal command="git annihilate -A" />
 ReactDOM.render(terminal, container);
-//const input = document.querySelector('#terminal-input');
-//console.log(input.textContent, input.textContent.length);
-//setCaretPosition(input, input.textContent.length);

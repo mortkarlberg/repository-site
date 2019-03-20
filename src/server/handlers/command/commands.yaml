@@ -1,0 +1,18 @@
+help:
+  type: TT
+  value: "Usage: <command> [options]"
+repo:
+  alias: repo --help
+repo --help:
+  type: TT,
+  value: "Usage: repo <command> [options]"
+repo play:
+  type: TT,
+  value: "TODO: This command should play songs from SoundCloud."
+repo -h:
+  alias: repo --help
+git annihilate --all:
+  type: TT,
+  value: Permission denied.
+git annihilate -A:
+  alias: git annihilate --all

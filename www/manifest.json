@@ -1,0 +1,12 @@
+{
+    "name": "Repository",
+    "short_name": "Repository",
+    "description": "The dev-metal band site.",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "black",
+    "theme_color": "black",
+    "lang": "en-US",
+    "icons": []
+  }
+  

@@ -13,6 +13,9 @@ repo -h:
   alias: repo --help
 git annihilate --all:
   type: TT,
-  value: Permission denied.
+  value: Permission denied. Requires rights of godlike proportions.
 git annihilate -A:
   alias: git annihilate --all
+git vomit:
+  type: TT
+  value: 
